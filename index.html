@@ -5,46 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayeyi Praise 26 | Minstrel Comfort Acheampong</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet"href="index.css">
-  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="land.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
-        tailwind.config = {
+           tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        gold: {
-                            400: '#D4AF37',
-                            500: '#C5A028',
-                            600: '#B08D1E',
-                            700: '#8B6914',
-                        },
-                        burgundy: {
-                            400: '#9B2335',
-                            500: '#7A1C2A',
-                            600: '#5C1520',
-                            900: '#2D0A10',
-                        },
-                        kente: {
-                            gold: '#D4AF37',
-                            green: '#228B22',
-                            red: '#B22222',
-                            black: '#1a1a1a',
-                        }
+                        gold: { 400: '#D4AF37', 500: '#C5A028', 600: '#B08D1E', 700: '#8B6914' },
+                        burgundy: { 400: '#9B2335', 500: '#7A1C2A', 600: '#5C1520', 900: '#2D0A10' },
                     },
                     fontFamily: {
                         display: ['"Playfair Display"', 'serif'],
                         body: ['"Inter"', 'sans-serif'],
                     },
                     animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                         'slide-up': 'slideUp 0.6s ease-out forwards',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     },
                     keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        },
                         slideUp: {
                             '0%': { opacity: '0', transform: 'translateY(40px)' },
                             '100%': { opacity: '1', transform: 'translateY(0)' },
@@ -53,9 +35,10 @@
                 }
             }
         }
+     
     </script>
     <style>
-   
+       
     </style>
 </head>
 <body class="bg-black text-white font-body antialiased overflow-x-hidden selection:bg-gold-500 selection:text-black">
@@ -113,9 +96,10 @@
                 <a href="#register" class="group px-8 py-4 bg-gold-500 text-black font-bold rounded-full hover:bg-gold-400 transition-all hover:scale-105 shadow-lg shadow-gold-500/20">
                     <i class="fas fa-ticket-alt mr-2"></i> Register to Attend
                 </a>
-                <a href="#program" class="px-8 py-4 border border-white/20 rounded-full hover:bg-white/5 transition-all">
-                    View Program
-                </a>
+                <a href="#program"><button class=" px-8 py-4 border border-white/20 rounded-full hover:bg-white/5 transition-all cursor-pointer">
+                    <i class="fas fa-users mr-2"></i> See The Program Outline
+                </button>
+            </a>
             </div>
 
             <!-- Countdown Timer -->
@@ -183,7 +167,7 @@
                             </div>
                             <div>
                                 <h4 class="font-semibold text-white">Time</h4>
-                                <p class="text-gray-400 text-sm">3:00 PM — 6:15 PM</p>
+                                <p class="text-gray-400 text-sm">3:00 PM — 6:20 PM</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
@@ -263,10 +247,9 @@
                 </div>
             </div>
         </div>
-    </section>
 
     <!-- Program Outline Section -->
-    <section id="program" class="py-24 relative overflow-hidden">
+      <section id="program" class="py-24 relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-6">
             <div class="text-center mb-16 reveal">
                 <span class="text-gold-400 text-sm tracking-widest uppercase mb-2 block">Order of Events</span>
@@ -398,28 +381,28 @@
                 </div>
             </div>
         </div>
-    </section>
+        </section>
 
-    <!-- Registration Section -->
+    <!-- Registration & Live Attendees Section -->
     <section id="register" class="py-24 bg-gradient-to-b from-burgundy-900/20 to-black relative">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16 items-start">
+        <div class="max-w-2xl mx-auto px-6">
+            <div class="flex justify-center">
                 <!-- Registration Form -->
-                <div class="reveal">
+                <div class="reveal w-full">
                     <span class="text-gold-400 text-sm tracking-widest uppercase mb-2 block">Register Now</span>
                     <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">Join Us in Worship</h2>
                     <p class="text-gray-400 mb-8">Register your attendance to help us prepare adequately for this glorious evening. Entry is free!</p>
 
                     <form id="registration-form" class="space-y-6">
                         <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Full Name *</label>
                             <input type="text" id="fullName" required placeholder="Enter your full name" 
                                 class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl focus:border-gold-500 focus:outline-none focus:bg-white/10 transition-all text-white placeholder-gray-500 input-focus">
                         </div>
 
                         <div class="grid grid-cols-2 gap-4">
                             <div>
-                                <label class="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Phone Number *</label>
                                 <input type="tel" id="phone" required placeholder="0244 000 000" 
                                     class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl focus:border-gold-500 focus:outline-none focus:bg-white/10 transition-all text-white placeholder-gray-500 input-focus">
                             </div>
@@ -442,6 +425,12 @@
                         </div>
 
                         <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Church / Ministry (Optional)</label>
+                            <input type="text" id="church" placeholder="Where do you fellowship?" 
+                                class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl focus:border-gold-500 focus:outline-none focus:bg-white/10 transition-all text-white placeholder-gray-500 input-focus">
+                        </div>
+
+                        <div>
                             <label class="block text-sm font-medium text-gray-300 mb-2">First Time Attending?</label>
                             <div class="flex gap-4">
                                 <label class="flex items-center gap-2 cursor-pointer">
@@ -455,12 +444,13 @@
                             </div>
                         </div>
 
-                        <button type="submit" class="w-full py-4 bg-gold-500 text-black font-bold rounded-xl hover:bg-gold-400 transition-all hover:scale-[1.02] shadow-lg shadow-gold-500/20">
-                            <i class="fas fa-check-circle mr-2"></i> Confirm Attendance
+                        <button type="submit" id="submit-btn" class="w-full py-4 bg-gold-500 text-black font-bold rounded-xl hover:bg-gold-400 transition-all hover:scale-[1.02] shadow-lg shadow-gold-500/20 flex items-center justify-center gap-2">
+                            <span id="btn-text"><i class="fas fa-check-circle mr-2"></i> Confirm Attendance</span>
+                            <div id="btn-spinner" class="spinner hidden"></div>
                         </button>
                     </form>
 
-                    <!-- Success Message (Hidden by default) -->
+                    <!-- Success Message -->
                     <div id="success-message" class="hidden mt-6 p-6 bg-green-500/10 border border-green-500/30 rounded-xl text-center">
                         <i class="fas fa-check-circle text-green-400 text-4xl mb-3"></i>
                         <h3 class="font-display text-xl font-bold text-white mb-2">Registration Confirmed!</h3>
@@ -470,55 +460,66 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Registered Attendees List -->
-                <div class="reveal" style="transition-delay: 0.2s;">
-                    <div class="glass rounded-2xl p-8 border border-white/5">
-                        <div class="flex items-center justify-between mb-6">
-                            <h3 class="font-display text-2xl font-bold">Confirmed Attendees</h3>
-                            <span class="px-3 py-1 bg-gold-500/10 text-gold-400 rounded-full text-sm font-medium">
-                                <span id="attendee-count">0</span> Registered
-                            </span>
-                        </div>
-
-                        <div class="space-y-3 max-h-[500px] overflow-y-auto pr-2" id="attendees-list">
-                            <!-- Empty state -->
-                            <div id="empty-state" class="text-center py-12 text-gray-500">
-                                <i class="fas fa-users text-4xl mb-3 opacity-30"></i>
-                                <p class="text-sm">Be the first to register!</p>
-                            </div>
-                        </div>
-
-                        <!-- Progress bar -->
-                        <div class="mt-6 pt-6 border-t border-white/5">
-                            <div class="flex justify-between text-sm mb-2">
-                                <span class="text-gray-400">Seats Filling Up</span>
-                                <span class="text-gold-400" id="capacity-percent">0%</span>
-                            </div>
-                            <div class="w-full h-2 bg-white/5 rounded-full overflow-hidden">
-                                <div id="progress-bar" class="h-full bg-gradient-to-r from-gold-600 to-gold-400 rounded-full transition-all duration-500" style="width: 0%"></div>
-                            </div>
-                            <p class="text-xs text-gray-500 mt-2">Capacity: 500 seats</p>
-                        </div>
-                    </div>
-
-                    <!-- Quick Info -->
-                    <div class="mt-6 grid grid-cols-2 gap-4">
-                        <div class="glass rounded-xl p-4 text-center border border-white/5">
-                            <i class="fas fa-car text-gold-400 text-xl mb-2"></i>
-                            <p class="text-xs text-gray-400">Parking Available</p>
-                        </div>
-                        <div class="glass rounded-xl p-4 text-center border border-white/5">
-                            <i class="fas fa-wheelchair text-gold-400 text-xl mb-2"></i>
-                            <p class="text-xs text-gray-400">Accessible Venue</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Sponsors Section -->
+    <!-- Attendees Modal -->
+    <div id="attendees-modal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-40 flex items-center justify-center p-4">
+        <div class="glass rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-white/10 p-8">
+            <div class="flex justify-between items-center mb-6">
+                <div>
+                    <span class="text-gold-400 text-sm tracking-widest uppercase mb-2 block">Live Registrations</span>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold">Who's Coming?</h2>
+                </div>
+                <button class="attend-close text-2xl text-gray-400 hover:text-white transition cursor-pointer">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="mb-6">
+                <input type="text" id="search-attendees" placeholder="Search attendees by name or church..." 
+                    class="w-full px-5 py-3 bg-white/5 border border-white/10 rounded-xl focus:border-gold-500 focus:outline-none focus:bg-white/10 transition-all text-white placeholder-gray-500 input-focus">
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-3 gap-4 mb-8">
+                <div class="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
+                    <p class="text-2xl font-bold text-gold-400" id="total-attendees">0</p>
+                    <p class="text-xs text-gray-500 uppercase tracking-wider mt-1">Attendees</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
+                    <p class="text-2xl font-bold text-burgundy-400" id="total-guests">0</p>
+                    <p class="text-xs text-gray-500 uppercase tracking-wider mt-1">Total Guests</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
+                    <p class="text-2xl font-bold text-green-400" id="first-timers">0</p>
+                    <p class="text-xs text-gray-500 uppercase tracking-wider mt-1">First Timers</p>
+                </div>
+            </div>
+
+            <!-- Capacity Progress Bar -->
+            <div class="mb-6">
+                <div class="flex justify-between items-center mb-2">
+                    <p class="text-sm text-gray-400">Venue Capacity</p>
+                    <p class="text-sm font-bold text-gold-400"><span id="capacity-percent">0</span></p>
+                </div>
+                <div class="w-full bg-white/5 rounded-full h-2 border border-white/10 overflow-hidden">
+                    <div id="progress-bar" class="bg-gradient-to-r from-gold-500 to-burgundy-500 h-full transition-all duration-500" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- Attendees List -->
+            <div id="attendees-list" class="space-y-3 max-h-[400px] overflow-y-auto pr-4 custom-scrollbar">
+                <div id="loading-state" class="text-center py-12 text-gray-500">
+                    <i class="fas fa-spinner fa-spin text-2xl mb-3 text-gold-400"></i>
+                    <p class="text-sm">Loading attendees...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <section class="py-16 bg-black border-y border-white/5">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-12 reveal">
@@ -617,9 +618,10 @@
                 <div>
                     <h5 class="font-semibold text-white mb-4">Contact</h5>
                     <div class="space-y-2 text-sm text-gray-500">
-                        <p><i class="fas fa-phone mr-2 text-gold-400"></i> +233 55 845 9582</p>
+                        <p><i class="fas fa-phone mr-2 text-gold-400"></i> +233 24 000 0000</p>
                         <p><i class="fas fa-envelope mr-2 text-gold-400"></i> info@ayeyipraise.com</p>
                         <p><i class="fas fa-map-marker-alt mr-2 text-gold-400"></i> Tema, Community 12</p>
+                        <p class="attend"><i class="fas fa-users mr-2 text-gold-400"></i> Attendees List</p>
                     </div>
                 </div>
             </div>
@@ -635,26 +637,304 @@
         </div>
     </footer>
 
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 hidden">
+        <div class="glass rounded-xl p-4 border border-gold-500/30 flex items-center gap-3 toast">
+            <i class="fas fa-user-plus text-gold-400"></i>
+            <div>
+                <p class="text-white text-sm font-medium" id="toast-message">New attendee registered!</p>
+                <p class="text-gray-400 text-xs" id="toast-detail">Someone just joined</p>
+            </div>
+        </div>
+    </div>
+
     <script>
-        // Mobile Menu
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-
-        // Navbar Scroll Effect
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) navbar.classList.add('bg-black/90', 'shadow-lg');
-            else navbar.classList.remove('bg-black/90', 'shadow-lg');
+                // ============================================
+        // JSONBIN CONFIGURATION
+        // ============================================
+        
+        // REPLACE THESE WITH YOUR ACTUAL JSONBIN CREDENTIALS
+       const JSONBIN_ID = '6a35427ef5f4af5e290f1f39'; // Replace with your bin ID
+        const JSONBIN_API_KEY = '$2a$10$W/Oai12n8GHOU3O7cC9Ln.vE8sVQA4ffmhuNANyM6DI51fdP0eroy'; 
+        
+        const BACKEND_URL = `https://api.jsonbin.io/v3/b/${JSONBIN_ID}`;
+        
+        // ============================================
+        // API FUNCTIONS
+        // ============================================
+        
+        async function fetchAttendees() {
+            try {
+                const response = await fetch(BACKEND_URL + '/latest', {
+                    method: 'GET',
+                    headers: {
+                        'X-Master-Key': '$2a$10$W/Oai12n8GHOU3O7cC9Ln.vE8sVQA4ffmhuNANyM6DI51fdP0eroy',
+                        'X-Bin-Meta': 'false'
+                    }
+                });
+                
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                
+                const data = await response.json();
+                console.log('JSONBin Response:', data); // Debug log
+                
+                // Handle both response structures
+                if (data.record && data.record.attendees) {
+                    return data.record.attendees;
+                } else if (data.attendees) {
+                    return data.attendees;
+                } else if (Array.isArray(data)) {
+                    return data;
+                } else {
+                    console.warn('Unexpected JSONBin response structure:', data);
+                    return [];
+                }
+            } catch (error) {
+                console.error('Error fetching from JSONBin:', error);
+                showError('Failed to load attendees. Check console and verify your JSONBin API key & bin ID.');
+                return [];
+            }
+        }
+        
+        async function saveAttendee(attendee) {
+            try {
+                // Step 1: Get current data
+                const getResponse = await fetch(BACKEND_URL + '/latest', {
+                    method: 'GET',
+                    headers: {
+                        'X-Master-Key': '$2a$10$W/Oai12n8GHOU3O7cC9Ln.vE8sVQA4ffmhuNANyM6DI51fdP0eroy',
+                        'X-Bin-Meta': 'false'
+                    }
+                });
+                
+                if (!getResponse.ok) throw new Error(`Failed to fetch: HTTP ${getResponse.status}`);
+                
+                const data = await getResponse.json();
+                console.log('Current JSONBin data:', data); // Debug log
+                
+                // Handle multiple response structures
+                let attendees = [];
+                if (data.record && data.record.attendees) {
+                    attendees = data.record.attendees;
+                } else if (data.attendees) {
+                    attendees = data.attendees;
+                } else if (Array.isArray(data)) {
+                    attendees = data;
+                }
+                
+                // Step 2: Add new attendee
+                attendees.unshift(attendee);
+                
+                // Step 3: Save updated data
+                const putResponse = await fetch(BACKEND_URL, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Master-Key': '$2a$10$W/Oai12n8GHOU3O7cC9Ln.vE8sVQA4ffmhuNANyM6DI51fdP0eroy'
+                    },
+                    body: JSON.stringify({ attendees: attendees })
+                });
+                
+                if (!putResponse.ok) throw new Error(`Failed to save: HTTP ${putResponse.status}`);
+                
+                console.log('Attendee saved successfully');
+                return true;
+            } catch (error) {
+                console.error('Error saving to JSONBin:', error);
+                return false;
+            }
+        }
+        
+        // ============================================
+        // UI FUNCTIONS
+        // ============================================
+        
+        let allAttendees = [];
+        const maxCapacity = 500;
+        let lastAttendeeCount = 0;
+        
+        function renderAttendees(attendees, highlightNew = false) {
+            const list = document.getElementById('attendees-list');
+            const loadingState = document.getElementById('loading-state');
+            
+            if (loadingState) loadingState.remove();
+            
+            // Calculate stats
+            const totalGuests = attendees.reduce((sum, a) => {
+                const g = a.guests === '5+' ? 5 : parseInt(a.guests || 1);
+                return sum + g;
+            }, 0);
+            const firstTimers = attendees.filter(a => a.firstTime === 'yes').length;
+            
+            document.getElementById('total-attendees').textContent = attendees.length;
+            document.getElementById('total-guests').textContent = totalGuests;
+            document.getElementById('first-timers').textContent = firstTimers;
+            
+            // Capacity progress
+            const percentage = Math.min((attendees.length / maxCapacity) * 100, 100);
+            document.getElementById('capacity-percent').textContent = Math.round(percentage) + '%';
+            document.getElementById('progress-bar').style.width = percentage + '%';
+            
+            if (attendees.length === 0) {
+                list.innerHTML = `
+                    <div class="text-center py-12 text-gray-500">
+                        <i class="fas fa-users text-4xl mb-3 opacity-30"></i>
+                        <p class="text-sm">No registrations yet. Be the first!</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            list.innerHTML = '';
+            
+            attendees.forEach((attendee, index) => {
+                const div = document.createElement('div');
+                const isNew = highlightNew && index === 0;
+                const guestCount = attendee.guests === '5+' ? '5+' : (attendee.guests || 1);
+                const initials = attendee.name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
+                
+                div.className = `flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/5 hover:border-gold-500/30 transition-all ${isNew ? 'new-attendee' : ''}`;
+                
+                div.innerHTML = `
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-500 to-burgundy-500 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                        ${initials}
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-center gap-2">
+                            <p class="text-white font-medium text-sm truncate">${attendee.name}</p>
+                            ${isNew ? '<span class="px-2 py-0.5 bg-gold-500/20 text-gold-400 text-[10px] rounded-full uppercase font-bold animate-pulse">Just Now</span>' : ''}
+                            ${attendee.firstTime === 'yes' ? '<span class="px-2 py-0.5 bg-green-500/20 text-green-400 text-[10px] rounded-full">First Timer</span>' : ''}
+                        </div>
+                        <p class="text-gray-500 text-xs">${guestCount} guest${guestCount > 1 ? 's' : ''} • ${attendee.church || 'No church listed'} • ${attendee.time || 'Recently'}</p>
+                    </div>
+                    <i class="fas fa-check-circle text-green-400 text-sm flex-shrink-0"></i>
+                `;
+                list.appendChild(div);
+            });
+        }
+        
+        function showToast(name, guests) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').textContent = 'New attendee registered!';
+            document.getElementById('toast-detail').textContent = `${name} +${guests} guest${guests > 1 ? 's' : ''}`;
+            
+            toast.classList.remove('hidden');
+            setTimeout(() => toast.classList.add('hidden'), 4000);
+        }
+        
+        function showError(message) {
+            const list = document.getElementById('attendees-list');
+            const loadingState = document.getElementById('loading-state');
+            if (loadingState) loadingState.remove();
+            
+            list.innerHTML = `
+                <div class="text-center py-12 text-red-400">
+                    <i class="fas fa-exclamation-circle text-4xl mb-3"></i>
+                    <p class="text-sm">${message}</p>
+                    <p class="text-xs text-gray-500 mt-2">Check your JSONBin ID and API Key</p>
+                </div>
+            `;
+        }
+        
+        // Search functionality
+        document.getElementById('search-attendees')?.addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const filtered = allAttendees.filter(a => 
+                a.name.toLowerCase().includes(query) || 
+                (a.church && a.church.toLowerCase().includes(query))
+            );
+            renderAttendees(filtered);
         });
-
-        // Scroll Reveal
-        const revealElements = document.querySelectorAll('.reveal');
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
-        }, { threshold: 0.1 });
-        revealElements.forEach(el => revealObserver.observe(el));
-
+        
+        // Registration form submission
+        document.getElementById('registration-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const btn = document.getElementById('submit-btn');
+            const btnText = document.getElementById('btn-text');
+            const btnSpinner = document.getElementById('btn-spinner');
+            
+            btn.disabled = true;
+            btnText.classList.add('hidden');
+            btnSpinner.classList.remove('hidden');
+            
+            const name = document.getElementById('fullName').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const guests = document.getElementById('guests').value;
+            const church = document.getElementById('church').value;
+            const firstTime = document.querySelector('input[name="firstTime"]:checked').value;
+            
+            const attendee = {
+                name: name,
+                phone: phone,
+                email: email,
+                guests: guests,
+                church: church,
+                firstTime: firstTime,
+                time: new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }),
+                date: new Date().toISOString().split('T')[0],
+                timestamp: Date.now()
+            };
+            
+            const success = await saveAttendee(attendee);
+            
+            if (success) {
+                allAttendees.unshift(attendee);
+                renderAttendees(allAttendees, true);
+                
+                document.getElementById('ref-code').textContent = 'AYE-2026-' + String(allAttendees.length).padStart(3, '0');
+                document.getElementById('success-message').classList.remove('hidden');
+                document.getElementById('registration-form').reset();
+                
+                setTimeout(() => {
+                    document.getElementById('success-message').classList.add('hidden');
+                }, 5000);
+            } else {
+                alert('Registration failed. Please check your JSONBin configuration and try again.');
+            }
+            
+            btn.disabled = false;
+            btnText.classList.remove('hidden');
+            btnSpinner.classList.add('hidden');
+        });
+        
+        // ============================================
+        // AUTO-REFRESH (Check for new registrations)
+        // ============================================
+        
+        async function checkForUpdates() {
+            const freshAttendees = await fetchAttendees();
+            
+            if (freshAttendees.length > lastAttendeeCount && lastAttendeeCount > 0) {
+                // New attendee detected!
+                const newAttendees = freshAttendees.slice(0, freshAttendees.length - lastAttendeeCount);
+                newAttendees.forEach(a => {
+                    showToast(a.name, a.guests === '5+' ? 5 : parseInt(a.guests || 1));
+                });
+            }
+            
+            if (JSON.stringify(freshAttendees) !== JSON.stringify(allAttendees)) {
+                allAttendees = freshAttendees;
+                renderAttendees(allAttendees);
+            }
+            
+            lastAttendeeCount = freshAttendees.length;
+        }
+        
+        // ============================================
+        // INITIALIZATION
+        // ============================================
+        
+        async function init() {
+            allAttendees = await fetchAttendees();
+            lastAttendeeCount = allAttendees.length;
+            renderAttendees(allAttendees);
+            
+            // Auto-refresh every 8 seconds
+            setInterval(checkForUpdates, 8000);
+        }
+        
         // Countdown Timer
         const eventDate = new Date('2026-07-05T16:00:00').getTime();
         function updateCountdown() {
@@ -678,87 +958,29 @@
         }
         setInterval(updateCountdown, 1000);
         updateCountdown();
-
-        // Attendee Registration System
-        let attendees = JSON.parse(localStorage.getItem('ayeyi_attendees')) || [];
-        const maxCapacity = 500;
-
-        function renderAttendees() {
-            const list = document.getElementById('attendees-list');
-            const count = document.getElementById('attendee-count');
-            const percent = document.getElementById('capacity-percent');
-            const progress = document.getElementById('progress-bar');
-            const emptyState = document.getElementById('empty-state');
-
-            count.textContent = attendees.length;
-            const percentage = Math.min((attendees.length / maxCapacity) * 100, 100);
-            percent.textContent = Math.round(percentage) + '%';
-            progress.style.width = percentage + '%';
-
-            if (attendees.length === 0) {
-                emptyState.classList.remove('hidden');
-                list.innerHTML = '';
-                list.appendChild(emptyState);
-                return;
-            }
-
-            emptyState.classList.add('hidden');
-            list.innerHTML = '';
-            
-            attendees.slice().reverse().forEach((attendee, index) => {
-                const div = document.createElement('div');
-                div.className = 'flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/5 hover:border-gold-500/30 transition-all';
-                div.innerHTML = `
-                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-500 to-burgundy-500 flex items-center justify-center text-white font-bold text-sm">
-                        ${attendee.name.charAt(0).toUpperCase()}
-                    </div>
-                    <div class="flex-1 min-w-0">
-                        <p class="text-white font-medium text-sm truncate">${attendee.name}</p>
-                        <p class="text-gray-500 text-xs">${attendee.guests} guest${attendee.guests > 1 ? 's' : ''} • ${attendee.time}</p>
-                    </div>
-                    <i class="fas fa-check-circle text-green-400 text-sm"></i>
-                `;
-                list.appendChild(div);
-            });
-        }
-
-        document.getElementById('registration-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('fullName').value;
-            const phone = document.getElementById('phone').value;
-            const email = document.getElementById('email').value;
-            const guests = document.getElementById('guests').value;
-            
-            const attendee = {
-                name: name,
-                phone: phone,
-                email: email,
-                guests: guests === '5+' ? 5 : parseInt(guests),
-                time: new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }),
-                ref: 'AYE-2026-' + String(attendees.length + 1).padStart(3, '0')
-            };
-            
-            attendees.push(attendee);
-            localStorage.setItem('ayeyi_attendees', JSON.stringify(attendees));
-            
-            // Show success
-            document.getElementById('ref-code').textContent = attendee.ref;
-            document.getElementById('success-message').classList.remove('hidden');
-            document.getElementById('registration-form').reset();
-            
-            renderAttendees();
-            
-            // Hide success after 5 seconds
-            setTimeout(() => {
-                document.getElementById('success-message').classList.add('hidden');
-            }, 5000);
+        
+        // Mobile Menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
         });
-
-        // Initial render
-        renderAttendees();
-
-        // Sponsor Modal Functions
+        
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) navbar.classList.add('bg-black/90', 'shadow-lg');
+            else navbar.classList.remove('bg-black/90', 'shadow-lg');
+        });
+        
+        // Scroll Reveal
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        revealElements.forEach(el => revealObserver.observe(el));
+        
+        // Start
+        init();
+         // Sponsor Modal Functions
         function openSponsorModal(sponsorId) {
             const modal = document.getElementById(sponsorId + '-modal');
             if (modal) {
@@ -783,6 +1005,30 @@
                     const modalId = modal.closest('[id$="-modal"]').id.replace('-modal', '');
                     closeSponsorModal(modalId);
                 }
+            }
+        });
+        // Attendees Modal Control
+        const attendeeModal = document.getElementById('attendees-modal');
+        const attendButtons = document.querySelectorAll('.attend');
+        const closeButton = document.querySelector('.attend-close');
+
+        attendButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                attendeeModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        closeButton.addEventListener('click', () => {
+            attendeeModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+
+        attendeeModal.addEventListener('click', (e) => {
+            if (e.target === attendeeModal) {
+                attendeeModal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
             }
         });
     </script>
